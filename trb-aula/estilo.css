@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+/* https://fonts.google.com/ -> Recuperar, baixa font usando o '@import' */
+
+
+/* Padrão para o Site */
+/* html {
+    --caminho: "imagens/home/usar/pag1_blcA_2em1.jpg";
+    --caminhoR: "imagens/home/usar/blc2_reduzido.JPG"; 
+    --fontebase: 18px;            -> * declaração da variável
+    font-size: var(--fontebase);  -> recuperação da variável
+} */
+
+body {
+    margin: 0 20px 0 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(29, 29, 29);
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+header nav {
+    margin: 0;
+    padding: 0; 
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    background-color: rgb(29, 29, 29);
+    line-height: 10px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: capitalize;  /* transforma o texto em maiúsculas, minúsculas ou apenas a primeira letra maiúscula */
+    
+    padding: 25px 20px;
+    transition: all 0.8s;
+    
+    display: flex;
+    font-size: 10px;
+}
+nav a:hover, nav a:active {
+    color: #c27d7d;
+    /* sombra no texto - valores na ordem: cor, desloc. horizontal, desloc. vertical, suavização da sombra */
+    text-shadow: rgb(65, 42, 42) 3px 3px 8px;
+    background-color: rgb(103, 97, 104);
+    border-radius: 5px;
+}
+
+/*  Sub-Menu Galeria .. */
+nav ul ul {
+    display: none;
+    padding: 0 10px;
+    position: absolute;
+    visibility: hidden;
+}
+nav ul li:hover > ul {
+    display: block;
+    visibility: visible;
+}
+nav ul li ul li a {
+    color: rgb(197, 36, 90);
+    font-size: 10px;
+    padding: 10px 15px;
+
+    background-color: rgb(29, 29, 29);
+    border-radius: 10px;
+}
+
+
+/* Pag1 - Área das 4 colunas */
+.col1, .col2, .col3, .col4 {
+    margin-bottom: 10px;
+    color: #57580c;  
+}
+
+/* Pag1 - Bloco 2 do index */
+.bloco2 {
+    display: flex;
+    justify-content: space-between;
+}
+    .blocoA {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        width: 39.5%;
+    }
+        .blocoA1 {  
+            height: 105px;
+            color: #57580c;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+        .blocoA2 {
+            height: 105px;
+        }
+    .blocoB {
+        height: 220px;
+        width: 60%;
+    }
+
+/* Padrão - footer */
+footer {
+    color: #000000;
+    background-color: #ad73d1;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 35px;
+}
+
+
+/* Pag2 - Galeria */
+.galeria {
+     margin-left: 2%;
+     margin-right: 2%;
+     display: grid;
+     grid-template-columns: 32% 32% 32%; 
+     gap: 8px;
+}
+main p {
+    font-size: medium;
+    font-style: oblique;
+    font-weight: bold;
+    color: #634477;
+}
+.h1galeria, .h1projeto, .h1contato {
+    text-align: center;
+    color: rgb(48, 0, 0);
+    background-color: #272627;
+    border-radius: 5px;
+    line-height: 35px;
+    margin: 0 35% 0 35%;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.galeriaF1-3col, .galeriaF2-3col, .galeriaF3-3col {
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: 32% 32% 32%; 
+    gap: 8px;
+}
+.galeriaF1-2col {
+    margin-top: -50%;
+    margin-left: 10%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: 32% 32%; 
+    gap: 8px;
+}
+.galeriaF2-2col, .galeriaF3-2col {
+    margin-top: 5%;
+    margin-left: 25%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: 40% 40%; 
+    gap: 20px;
+}
+.galeriaF3-1col {
+        display: flex;
+        justify-content: space-between;
+    }
+        .gF3-colA {
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            width: 48%;
+            margin-left: 35px;
+        }
+        .gF3-colB {
+            width: 37%;
+            text-align: justify;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-right: 25px;
+            margin-top: -10px;
+        }
+        .gF3-colB-Font {
+            font-size: 11px;
+        }
+
+/* Pag2 - Padrao Galeria (Botao Voltar) */
+.voltar {
+    border: #670103 2px solid;
+    background-image: linear-gradient(#8a8296, #634477);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+/* Pag3 - Dedicatoria */
+.dedicatoria {
+    background-image: url("imagens/dedicatoria/fundo-dedicatoria.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.uldedicatoria {
+    background-color: rgb(201, 201, 201);
+    line-height: 10px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
+.h1dedicatoria {
+    text-align: center;
+    color: #ad73d1;
+}
+.pessoal_capa {
+    border-radius: 10px;
+}
+.h2dedicatoria {
+    text-align: center;
+    color: rgb(199, 219, 233);
+    font-size: 20px;
+}
+.dedicatoria-1col {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 45%; 
+    gap: 10px;
+}
+.txtdedicatoria {
+    color: rgb(56, 18, 18);
+    text-align: center;
+    font-size: 14px;
+    font-style: initial;
+    text-shadow: rgb(224, 140, 140) 3px 3px 8px;
+}
+.video {
+    border-radius: 10px;
+    padding-left: 0;
+    margin-left: 5%;
+}
+
+
+/* Pag4 - Projeto */
+.h2projeto, .h2galeria {
+    color: #ad73d1;
+    font-size: 10px;
+}
+.projeto {
+    margin-top: 1%;
+    margin-left: 18%;
+    margin-right: 7%;
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    gap: 8px;
+}
+
+
+/* breakpoints - ponto de quebra de layout */
+/* CSS para telas acima de 600px */
+@media screen and (min-width: 600px) {
+    /* Pag2 - Galeria F3 */
+    .gF3-colA {
+        margin-left: 10%;
+        margin-top: 40px;
+        width: 50%;
+    }
+    .gF3-colB {
+        margin-top: 10px;
+        margin-right: 1%;    
+    }
+    .gF3-colB-Font {
+        font-size: .8rem;
+    }
+}
+
+/* breakpoints - ponto de quebra de layout */
+/* CSS para telas acima de 760px */
+@media screen and (min-width: 760px) {
+    /* Pag1 - Index */
+    nav a {
+        padding: 28px 40px;
+        font-size: 16px;
+    }
+    .textoArea {
+        left: 65%;
+        font-size: larger;
+    }
+    .area-destaque {
+        width: 30%;
+        height: 10px;
+    }
+    .colunas {
+        display: flex;
+        flex-wrap: wrap; /* determina quebra de conteúdo flexbox */
+        justify-content: space-between;
+    }
+    .col1, .col2, .col3, .col4 {
+        width: 20%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .blocoA1 {  
+        font-size: 18px;
+    }
+     /*  Sub-Menu Galeria .. */
+    nav ul li ul li a {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+     
+    /* Pag2 - Galeria (Tela Principal)*/
+    .galeria {     
+         margin-left: 7%;
+         margin-right: 5%;
+         display: grid;
+         grid-template-columns: 35% 35% 35%; 
+         gap: 10px;
+    }
+    .h1galeria, .h1projeto, .h1contato {
+        font-size: 30px;
+    }
+    .h2galeria, .h2projeto {
+        font-size: 12px;
+    }
+    /* Pag2 - Galeria F1 */
+    main p {
+        font-size: larger;
+    }
+    .galeriaF1-2col {
+        margin-top: -32%;
+    }
+    /* Pag2 - Galeria F3 */
+    .gF3-colA {
+        margin-left: 10%;
+        margin-top: 20px;
+        width: 40%;  
+    }
+    .gF3-colB {
+        margin-top: 10px;
+        margin-right: 10%;
+    }
+    .gF3-colB-Font {
+        font-size: 1.2rem;
+    }
+   
+    /* Pag3 - Dedicatória */
+    .h2dedicatoria {
+        font-size: 30px;
+    }
+    .dedicatoria-1col {
+        margin-left: 28%;
+        margin-right: 10%;
+    }
+    .txtdedicatoria {
+        font-size: 20px;
+    }
+    .h2dedicatoria {
+        text-align: right;
+    }
+    .video {
+        border-radius: 10px;
+        margin-left: 69%;
+    }
+}
+
+/* breakpoints - ponto de quebra de layout */
+/* CSS para telas acima de 1000px */
+@media screen and (min-width: 1000px) {
+     /* Pag1 - Sub-Menu Galeria .. */
+    nav ul li ul li a {
+        font-size: 16px;
+        padding: 20px 15px;
+    }
+}
+
+/* breakpoints - ponto de quebra de layout */
+/* CSS para telas acima de 1700px */
+@media screen and (min-width: 1700px) {
+    /* Pag2 - Galeria (F1 e F3) */
+    .galeriaF1-2col {
+        margin-top: -23%;
+    }
+    .gF3-colB-Font {
+        font-size: 26px;
+    }
+
+     /* Pag3 - Dedicatória */
+    .txtdedicatoria {
+        font-size: 26px;
+    }
+    .video{
+        margin-left: 77%;   
+    }
+}
